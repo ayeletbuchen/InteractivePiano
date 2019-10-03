@@ -12,7 +12,7 @@ public class InstrumentsPanel extends JPanel {
         setSize(MainFrameInterface.KEYBOARD_WIDTH, MainFrameInterface.INSTRUMENTS_PANEL_HEIGHT);
         setBackground(Color.BLACK);
         for (InstrumentButton instrumentButton: new InstrumentButtonsArray()) {
-            instrumentButton.addActionListener(e -> midiChannel.programChange(instrumentButton.getInstrument()));
+            instrumentButton.addActionListener(e -> midiChannel.programChange(instrumentButton.getInstrument().getInstrumentChannel()));
             add(instrumentButton);
         }
     }
